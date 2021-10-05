@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <report
+            id="report_invoice"
+            string="Invoice"
+            model="book.hotel"
+            report_type="qweb-pdf"
+            name="hotel_booking.report_invoice"
+            file="hotel_booking.report_invoice"/>
+
+    <!--    <report-->
+    <!--        id="report_buyer_card"-->
+    <!--        string="Buyer Card"-->
+    <!--        model="estate.buyer.info"-->
+    <!--        report_type="qweb-pdf"-->
+    <!--        name="real_estate.report_buyer"-->
+    <!--        file="real_estate.report_buyer"/>-->
+
+
+</odoo>
