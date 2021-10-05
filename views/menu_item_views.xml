@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+                id='hotel_menu'
+                name='Hotel'
+                web_icon="hotel,static/description/icon.png"/>
+
+        <record id='action_nearby_hotel' model='ir.actions.act_window'>
+            <field name='name'>Nearby Hotel</field>
+            <field name='res_model'>hotels.nearby</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem
+                id='menu_nearby_hotel'
+                action='action_nearby_hotel'
+                name='Nearby Hotel'
+                parent='hotel_menu'
+                sequence='1'/>
+
+        <record id='action_hotel_book' model='ir.actions.act_window'>
+            <field name='name'>Hotel Book</field>
+            <field name='res_model'>book.hotel</field>
+            <field name='view_mode'>tree,form</field>
+        </record>
+
+        <menuitem
+                id='menu_hotel_book'
+                action='action_hotel_book'
+                name='Book Hotel'
+                parent='hotel_menu'
+                sequence='2'/>
+
+    </data>
+</odoo>

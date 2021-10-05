@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id='hotel_booking_tree' model='ir.ui.view'>
+            <field name='name'>book.hotel.tree</field>
+            <field name='model'>book.hotel</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <field name='hotel_name_id'/>
+                    <field name='user'/>
+                    <field name='customer_address'/>
+                    <field name='customer_number'/>
+                    <field name='expected_room'/>
+                    <field name='room_type'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hotel_booking_form" model="ir.ui.view">
+            <field name="name">book.hotel.form</field>
+            <field name="model">book.hotel</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="approve_booking" string="Approve" type="object"
+                                groups="hotel_booking.group_hotel_admin,hotel_booking.group_hotel_manager"
+                                class="btn-primary"/>
+                        <button name="reject_booking" string="Reject" type="object"
+                                groups="hotel_booking.group_hotel_admin,hotel_booking.group_hotel_manager"
+                                class="btn-danger"/>
+                    </header>
+                    <sheet>
+                        <group string="Hotel Book">
+                            <field name='hotel_name_id'/>
+                            <field name='user'/>
+                            <field name='customer_address'/>
+                            <field name='customer_number'/>
+                            <field name='expected_room'/>
+                            <field name='statusID'/>
+                            <field name='room_type'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

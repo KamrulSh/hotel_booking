@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id='view_hotels_tree' model='ir.ui.view'>
+            <field name='name'>near.hotel.tree</field>
+            <field name='model'>hotels.nearby</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <field name='name'/>
+                    <field name='description'/>
+                    <field name='address'/>
+                    <field name='location'/>
+                    <field name='number'/>
+                    <field name='available_rooms'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hotels_form" model="ir.ui.view">
+            <field name="name">near.hotel.form</field>
+            <field name="model">hotels.nearby</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="book_now" string="Book here" type="object" class="btn-primary"/>
+                    </header>
+                    <sheet>
+                        <group string="Hotel Details">
+                            <field name='name'/>
+                            <field name='description'/>
+                            <field name='address'/>
+                            <field name='location'/>
+                            <field name='number'/>
+                            <field name='available_rooms'/>
+                            <field name='image' widget='image' class='oe_avatar'/>
+                        </group>
+                        <group>
+                            <field name='book_hotel_ids'
+                                   groups="hotel_booking.group_hotel_admin,hotel_booking.group_hotel_manager"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
