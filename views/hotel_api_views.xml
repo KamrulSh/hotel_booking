@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id='hotel_api_tree' model='ir.ui.view'>
+            <field name='name'>api.hotel.tree</field>
+            <field name='model'>hotels.api</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <field name='hotel_name'/>
+                    <field name='total_rooms'/>
+                    <field name='country'/>
+                    <field name='phone'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hotel_api_form" model="ir.ui.view">
+            <field name="name">book.hotel.form</field>
+            <field name="model">hotels.api</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group string="Hotel Data">
+                            <field name='hotel_name'/>
+                            <field name='total_rooms'/>
+                            <field name='country'/>
+                            <field name='phone'/>
+                            <field name='social'/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

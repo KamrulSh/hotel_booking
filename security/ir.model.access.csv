@@ -1,7 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_hotels_nearby_admin,access_hotels_nearby,model_hotels_nearby,hotel_booking.group_hotel_admin,1,1,1,1
 access_book_hotel_admin,access_book_hotel,model_book_hotel,hotel_booking.group_hotel_admin,1,1,1,1
+access_hotels_api_admin,access_hotels_api,model_hotels_api,hotel_booking.group_hotel_admin,1,1,1,1
 access_hotels_nearby_manager,access_hotels_nearby,model_hotels_nearby,hotel_booking.group_hotel_manager,1,1,1,0
 access_book_hotel_manager,access_book_hotel,model_book_hotel,hotel_booking.group_hotel_manager,1,1,1,0
+access_hotels_api_manager,access_hotels_api,model_hotels_api,hotel_booking.group_hotel_manager,1,1,1,0
 access_hotels_nearby_user,access_hotels_nearby,model_hotels_nearby,hotel_booking.group_hotel_user,1,0,0,0
 access_book_hotel_user,access_book_hotel,model_book_hotel,hotel_booking.group_hotel_user,1,0,1,0
+access_hotels_api_user,access_hotels_api,model_hotels_api,hotel_booking.group_hotel_user,1,0,0,0
